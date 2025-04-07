@@ -1,6 +1,6 @@
 package Shorna;
 
-public class Finance
+public class AuditingAndFraudDetection
 {
     @javafx.fxml.FXML
     public void initialize() {

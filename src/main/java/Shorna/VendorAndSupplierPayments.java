@@ -1,6 +1,6 @@
 package Shorna;
 
-public class Finance
+public class VendorAndSupplierPayments
 {
     @javafx.fxml.FXML
     public void initialize() {
