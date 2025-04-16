@@ -8,7 +8,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        String fxmlPath = "/com/example/simulatingoperationsofanewspaper/HRM/EmployeeOnboarding.fxml";
+        String fxmlPath = "/com/example/simulatingoperationsofanewspaper/TanvirulHRM/Payroll&Salaries.fxml";
         System.out.println("Loading FXML from: " + fxmlPath);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
         Parent root = fxmlLoader.load();
@@ -16,8 +16,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Employee Onboarding");
         stage.setScene(scene);
         stage.show();
-    }
-    public static void main(String[] args) {
+    }    public static void main(String[] args) {
         launch();
     }
 }
