@@ -1,28 +1,29 @@
 package com.example.simulatingoperationsofanewspaper.TanvirulADMIN;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.*;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
 
-public class GeneratingSystemReportsController
+public class SystemBackupDataSecurityController
 {
-    @javafx.fxml.FXML
-    private TextField idTextField;
-    @javafx.fxml.FXML
-    private TextField titleTextField;
-    @javafx.fxml.FXML
-    private TableColumn titleTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn idTableColumn;
     @javafx.fxml.FXML
     private DatePicker dateDatePicker;
     @javafx.fxml.FXML
-    private ComboBox typeComboBox;
+    private TextField backupTextField;
+    @javafx.fxml.FXML
+    private TableColumn palceTableColumn;
+    @javafx.fxml.FXML
+    private ComboBox TypeComboBox;
+    @javafx.fxml.FXML
+    private TextField placeTextField;
     @javafx.fxml.FXML
     private TableColumn typeTableColumn;
     @javafx.fxml.FXML
-    private TableView GeneratingSystemReportsTableView;
-    @javafx.fxml.FXML
     private TableColumn dateTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn backupTableColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
