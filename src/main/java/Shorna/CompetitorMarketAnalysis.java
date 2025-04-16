@@ -1,6 +1,6 @@
 package Shorna;
 
-public class SubscriptionAndAdvertisementRevenueManagement
+public class CompetitorMarketAnalysis
 {
     @javafx.fxml.FXML
     public void initialize() {
