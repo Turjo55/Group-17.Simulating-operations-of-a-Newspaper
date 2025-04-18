@@ -45,5 +45,6 @@ public class SendCompanyAnnouncements {
         this.notification = notification;
 
 
+
     }
 }
