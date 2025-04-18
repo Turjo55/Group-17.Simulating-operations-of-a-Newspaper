@@ -1,9 +1,12 @@
-package com.example.simulatingoperationsofanewspaper.TanvirulADMIN;
+package com.example.simulatingoperationsofanewspaper.TanvirulHRM;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.*;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
 
-public class GeneratingSystemReportsController
+public class TrainingDevelopmentController
 {
     @javafx.fxml.FXML
     private TextField idTextField;
@@ -14,13 +17,15 @@ public class GeneratingSystemReportsController
     @javafx.fxml.FXML
     private TableColumn idTableColumn;
     @javafx.fxml.FXML
+    private TableColumn nameTableColumn;
+    @javafx.fxml.FXML
     private DatePicker dateDatePicker;
     @javafx.fxml.FXML
     private ComboBox typeComboBox;
     @javafx.fxml.FXML
-    private TableColumn typeTableColumn;
+    private TextField nameTextField;
     @javafx.fxml.FXML
-    private TableView GeneratingSystemReportsTableView;
+    private TableColumn typeTableColumn;
     @javafx.fxml.FXML
     private TableColumn dateTableColumn;
 

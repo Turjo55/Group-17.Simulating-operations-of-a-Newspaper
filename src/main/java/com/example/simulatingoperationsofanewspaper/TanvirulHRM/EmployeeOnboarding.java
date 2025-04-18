@@ -23,6 +23,18 @@ public class EmployeeOnboarding {
     @FXML private TableColumn<EmployeeOnboardingModel, String> contractTableColumn;
 
     private ObservableList<EmployeeOnboardingModel> employeeList = FXCollections.observableArrayList();
+    @FXML
+    private Label contractLabel;
+    @FXML
+    private Label contactNumberLabel;
+    @FXML
+    private Label employeeIDLabel;
+    @FXML
+    private Label addressLabel;
+    @FXML
+    private Label typeLabel;
+    @FXML
+    private Label nameLabel;
 
     @FXML
     public void initialize() {

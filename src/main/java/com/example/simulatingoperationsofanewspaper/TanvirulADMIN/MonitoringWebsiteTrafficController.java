@@ -3,26 +3,26 @@ package com.example.simulatingoperationsofanewspaper.TanvirulADMIN;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
-public class GeneratingSystemReportsController
+public class MonitoringWebsiteTrafficController
 {
     @javafx.fxml.FXML
-    private TextField idTextField;
-    @javafx.fxml.FXML
-    private TextField titleTextField;
-    @javafx.fxml.FXML
-    private TableColumn titleTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn idTableColumn;
+    private TableColumn pageViewTableColumn;
     @javafx.fxml.FXML
     private DatePicker dateDatePicker;
     @javafx.fxml.FXML
-    private ComboBox typeComboBox;
+    private TableColumn visitorsTypeTableColumn;
     @javafx.fxml.FXML
-    private TableColumn typeTableColumn;
+    private TextField timeTextField;
     @javafx.fxml.FXML
-    private TableView GeneratingSystemReportsTableView;
+    private TextField pageViewTextField;
+    @javafx.fxml.FXML
+    private TableColumn timeTableColumn;
     @javafx.fxml.FXML
     private TableColumn dateTableColumn;
+    @javafx.fxml.FXML
+    private ComboBox visitorsComboBox;
+    @javafx.fxml.FXML
+    private TableView MonitoringWebsiteTrafficTableView;
 
     @javafx.fxml.FXML
     public void initialize() {

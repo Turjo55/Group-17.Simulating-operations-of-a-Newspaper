@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofanewspaper.TanvirulHRM.EvaluationFeedbackController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="nameTextField" layoutX="88.0" layoutY="36.0" />
+            <TextField fx:id="scoreTextField" layoutX="88.0" layoutY="93.0" />
+            <TextField fx:id="codeTextField" layoutX="436.0" layoutY="36.0" />
+            <Label fx:id="nameLabel" layoutX="37.0" layoutY="40.0" text="Name:" />
+            <Label fx:id="scoreLabel" layoutX="37.0" layoutY="97.0" text="Score:" />
+            <Label fx:id="codeLabel" layoutX="390.0" layoutY="40.0" text="Code:" />
+            <Button layoutX="225.0" layoutY="147.0" mnemonicParsing="false" onAction="#addPerformanceScoreButton" text="Add Performance Score" />
+            <TableView fx:id="addPerformanceScoreTableView" layoutX="23.0" layoutY="186.0" prefHeight="200.0" prefWidth="545.0">
+               <columns>
+                  <TableColumn fx:id="nameTableColumn" prefWidth="206.66665649414062" text="Name" />
+                  <TableColumn fx:id="codeTableColumn" prefWidth="166.0" text="Code" />
+                  <TableColumn fx:id="scoreTableColumn" prefWidth="171.99996948242188" text="Score" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

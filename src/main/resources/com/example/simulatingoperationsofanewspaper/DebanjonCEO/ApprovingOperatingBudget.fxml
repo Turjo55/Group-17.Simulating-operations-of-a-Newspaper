@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="539.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofanewspaper.DebanjonCEO.ApprovingOperatingBudget">
+   <children>
+      <Label layoutX="61.0" layoutY="56.0" prefHeight="26.0" prefWidth="69.0" text="Budget Id  :" />
+      <Label layoutX="324.0" layoutY="61.0" text="Amount  :" />
+      <TextField layoutX="138.0" layoutY="57.0" />
+      <TextField layoutX="396.0" layoutY="57.0" prefHeight="26.0" prefWidth="163.0" />
+      <TextField layoutX="152.0" layoutY="122.0" prefHeight="34.0" prefWidth="407.0" />
+      <Label layoutX="57.0" layoutY="131.0" prefHeight="17.0" prefWidth="78.0" text="Description  :" />
+      <Button layoutX="238.0" layoutY="210.0" mnemonicParsing="false" text="Approve" />
+      <Button layoutX="365.0" layoutY="210.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="Reject" />
+      <TableView layoutX="89.0" layoutY="282.0" prefHeight="189.0" prefWidth="521.0">
+        <columns>
+          <TableColumn prefWidth="175.0" text="Budget Id  " />
+          <TableColumn prefWidth="145.0" text="Description  " />
+            <TableColumn prefWidth="197.0" text="Amount  " />
+        </columns>
+      </TableView>
+      <Button layoutX="651.0" layoutY="489.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="62.0" text="Back" />
+   </children>
+</AnchorPane>

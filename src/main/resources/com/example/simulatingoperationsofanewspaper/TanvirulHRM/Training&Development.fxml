@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofanewspaper.TanvirulHRM.TrainingDevelopmentController">
+   <children>
+      <Label layoutX="57.0" layoutY="53.0" text="name" />
+      <Label layoutX="57.0" layoutY="92.0" text="id" />
+      <Label layoutX="64.0" layoutY="136.0" text="title" />
+      <Label layoutX="371.0" layoutY="40.0" text="date" />
+      <Label layoutX="371.0" layoutY="83.0" text="type" />
+      <TextField fx:id="nameTextField" layoutX="111.0" layoutY="49.0" />
+      <TextField fx:id="idTextField" layoutX="103.0" layoutY="88.0" />
+      <TextField fx:id="titleTextField" layoutX="111.0" layoutY="135.0" />
+      <Button layoutX="373.0" layoutY="141.0" mnemonicParsing="false" onAction="#addButtonOnClick" text="Button" />
+      <ComboBox fx:id="typeComboBox" layoutX="410.0" layoutY="79.0" prefWidth="150.0" />
+      <TableView layoutX="21.0" layoutY="186.0" prefHeight="200.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="nameTableColumn" prefWidth="75.0" text="name" />
+          <TableColumn fx:id="idTableColumn" prefWidth="132.00003051757812" text="id" />
+            <TableColumn fx:id="titleTableColumn" prefWidth="94.6666259765625" text="title" />
+            <TableColumn fx:id="dateTableColumn" prefWidth="118.6666259765625" text="date" />
+            <TableColumn fx:id="typeTableColumn" prefWidth="138.66668701171875" text="type" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="dateDatePicker" layoutX="398.0" layoutY="36.0" />
+   </children>
+</AnchorPane>

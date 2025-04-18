@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofanewspaper.TanvirulADMIN.ManagingAdvertisementsController">
+   <children>
+      <TextField fx:id="nameTextField" layoutX="90.0" layoutY="25.0" />
+      <TextField fx:id="topicTextField" layoutX="102.0" layoutY="121.0" />
+      <DatePicker fx:id="dateDatePicker" layoutX="90.0" layoutY="74.0" />
+      <ImageView fx:id="imageImageView" fitHeight="150.0" fitWidth="200.0" layoutX="376.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="280.0" layoutY="146.0" mnemonicParsing="false" onAction="#addButtonOnClick" text="Button" />
+      <Label layoutX="46.0" layoutY="29.0" text="name" />
+      <Label layoutX="46.0" layoutY="78.0" text="date" />
+      <Label layoutX="46.0" layoutY="125.0" text="topic" />
+      <Label layoutX="332.0" layoutY="95.0" text="image" />
+      <TableView fx:id="ManagingAdvertisementsTableView" layoutX="14.0" layoutY="188.0" prefHeight="200.0" prefWidth="583.0">
+        <columns>
+          <TableColumn fx:id="nameTableColumn" prefWidth="256.6666259765625" text="name" />
+          <TableColumn fx:id="dateTableColumn" prefWidth="156.66671752929688" text="date" />
+            <TableColumn fx:id="topicTableColumn" prefWidth="168.66665649414062" text="topic" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
