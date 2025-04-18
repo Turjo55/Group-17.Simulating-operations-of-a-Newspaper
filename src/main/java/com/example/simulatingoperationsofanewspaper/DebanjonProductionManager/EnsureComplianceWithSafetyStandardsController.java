@@ -1,4 +1,4 @@
 package com.example.simulatingoperationsofanewspaper.DebanjonProductionManager;
 
-public class ProductionManager {
+public class EnsureComplianceWithSafetyStandardsController {
 }
