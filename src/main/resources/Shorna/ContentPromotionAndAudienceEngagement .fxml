@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Shorna.ContentPromotionAndAudienceEngagement"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shorna.ContentPromotionAndAudienceEngagement">
+   <children>
+      <Label fx:id="ContentPromotionAudienceEngagementLabel" layoutX="152.0" layoutY="40.0" text="Content Promotion &amp; Audience Engagement">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <VBox layoutX="38.0" layoutY="69.0" prefHeight="391.0" prefWidth="494.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleSelectContentPromotion" text="Select Content Promotion" />
+            <Label text="Social Media Post Scheduler:" />
+            <TextField fx:id="socialMediaMessageField" />
+            <DatePicker fx:id="postDatePicker" />
+            <Button mnemonicParsing="false" onAction="#handleScheduleSocialMediaPost" text="Schedule Post" />
+            <Button mnemonicParsing="false" onAction="#handleGenerateEngagementReport" text="Generate Engagement Report" />
+            <TextArea fx:id="reportArea" prefHeight="64.0" prefWidth="194.0" />
+            <Label text="Top Article Campaign:" />
+            <TextField fx:id="emailSubjectField" />
+            <DatePicker fx:id="emailScheduleDate" />
+            <TextArea fx:id="emailBodyArea" prefHeight="49.0" prefWidth="98.0" />
+            <Button mnemonicParsing="false" onAction="#handleScheduleEmailCampaign" text="Schedule Email Campaign" />
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
