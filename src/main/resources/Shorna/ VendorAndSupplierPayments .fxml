@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Shorna.VendorAndSupplierPayments"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane prefHeight="503.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shorna.VendorAndSupplierPayments">
+   <children>
+      <Label fx:id="VendorAndSupplierPaymentsLabel" layoutX="198.0" layoutY="42.0" text="Vendor and Supplier Payments">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <VBox layoutX="34.0" layoutY="104.0" prefHeight="343.0" prefWidth="302.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleLoadInvoices" text="Show Pending Invoices" />
+            <TableView fx:id="invoiceTable" prefHeight="199.0" prefWidth="301.0">
+              <columns>
+                <TableColumn fx:id="colVendor" prefWidth="75.0" text="Vendor" />
+                <TableColumn fx:id="colInvoiceNo" prefWidth="75.0" text="Invoice No" />
+                  <TableColumn fx:id="colAmount" prefWidth="75.0" text="Amount" />
+                  <TableColumn fx:id="colStatus" prefWidth="75.0" text="Status" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleApprove" text="Approve" />
+                  <Button mnemonicParsing="false" onAction="#handleModify" text="Modify" />
+                  <Button mnemonicParsing="false" onAction="#handleReject" text="Reject" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button layoutX="487.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleGenerateReport" text="Generate Payment Report" />
+   </children>
 </AnchorPane>

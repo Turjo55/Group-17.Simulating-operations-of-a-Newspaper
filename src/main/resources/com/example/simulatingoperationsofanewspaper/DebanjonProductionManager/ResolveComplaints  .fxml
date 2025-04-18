@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.simulatingoperationsofanewspaper.DebanjonProductionManager.ResolveComplaints"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="512.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofanewspaper.DebanjonProductionManager.ResolveComplaints">
+   <children>
+      <ComboBox fx:id="selectStrategyApproachComboBox" layoutX="238.0" layoutY="55.0" prefHeight="37.0" prefWidth="291.0" />
+      <TextArea fx:id="policyDetailsTextArea" layoutX="64.0" layoutY="148.0" prefHeight="200.0" prefWidth="526.0" />
+      <Button layoutX="181.0" layoutY="371.0" mnemonicParsing="false" onAction="#updateButton" text="Update " />
+      <Button layoutX="384.0" layoutY="371.0" mnemonicParsing="false" onAction="#backButton" prefHeight="25.0" prefWidth="59.0" text="Back" />
+      <Button layoutX="555.0" layoutY="457.0" mnemonicParsing="false" onAction="#returnHomeButton" prefHeight="25.0" prefWidth="87.0" text="Return Home" />
+      <Label layoutX="64.0" layoutY="65.0" text="Select Strategy Approach  :" />
+      <Label layoutX="64.0" layoutY="119.0" text="Policy Details  :" />
+   </children>
 </AnchorPane>
