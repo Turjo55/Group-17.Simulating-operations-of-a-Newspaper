@@ -2,58 +2,61 @@ package com.example.simulatingoperationsofanewspaper.TanvirulADMIN;
 
 import javafx.beans.property.StringProperty;
 
-public class SystemBackup {
-    private final StringProperty backup;
-    private final StringProperty type;
-    private final StringProperty date;
-    private final StringProperty place;
+import java.time.LocalDate;
 
-    public SystemBackup(StringProperty backup, StringProperty type, StringProperty date, StringProperty place) {
-        this.backup = backup;
+public class SystemBackup {
+    private String place;
+    private String type;
+    private LocalDate date;
+    private String backup;
+
+    public SystemBackup(String place, String type, LocalDate date, String backup) {
+        this.place = place;
         this.type = type;
         this.date = date;
-        this.place = place;
-    }
-
-    public String getBackup() {
-        return backup.get();
-    }
-
-    public StringProperty backupProperty() {
-        return backup;
-    }
-
-    public String getType() {
-        return type.get();
-    }
-
-    public StringProperty typeProperty() {
-        return type;
-    }
-
-    public String getDate() {
-        return date.get();
-    }
-
-    public StringProperty dateProperty() {
-        return date;
+        this.backup = backup;
     }
 
     public String getPlace() {
-        return place.get();
+        return place;
     }
 
-    public StringProperty placeProperty() {
-        return place;
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public String getBackup() {
+        return backup;
+    }
+
+    public void setBackup(String backup) {
+        this.backup = backup;
     }
 
     @Override
     public String toString() {
         return "SystemBackup{" +
-                "backup=" + backup +
-                ", type=" + type +
+                "place='" + place + '\'' +
+                ", type='" + type + '\'' +
                 ", date=" + date +
-                ", place=" + place +
+                ", backup='" + backup + '\'' +
                 '}';
     }
 }
+

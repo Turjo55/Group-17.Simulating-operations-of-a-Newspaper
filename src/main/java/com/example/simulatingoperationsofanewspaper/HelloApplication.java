@@ -8,7 +8,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        String fxmlPath = "/com/example/simulatingoperationsofanewspaper/TanvirulADMIN/ManagingAdvertisements.fxml";
+        String fxmlPath = "/com/example/simulatingoperationsofanewspaper/TanvirulADMIN/SystemBackupDataSecurity.fxml";
         System.out.println("Loading FXML from: " + fxmlPath);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));
         Parent root = fxmlLoader.load();
