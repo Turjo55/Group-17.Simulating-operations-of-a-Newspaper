@@ -6,9 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.time.LocalDate;
-
 public class SystemBackupDataSecurityController {
     @FXML
     private DatePicker dateDatePicker;
@@ -33,16 +31,11 @@ public class SystemBackupDataSecurityController {
 
     @FXML
     public void initialize() {
-        // Setup ComboBox options
         TypeComboBox.setItems(FXCollections.observableArrayList("Full", "Incremental", "Differential"));
-
-        // Setup table columns
         palceTableColumn.setCellValueFactory(new PropertyValueFactory<>("place"));
         typeTableColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
         dateTableColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
         backupTableColumn.setCellValueFactory(new PropertyValueFactory<>("backup"));
-
-        // Bind list to table
         backupTableView.setItems(backupList);
     }
 
@@ -54,14 +47,11 @@ public class SystemBackupDataSecurityController {
         String backup = backupTextField.getText();
 
         if (place.isEmpty() || type == null || date == null || backup.isEmpty()) {
-            System.out.println("Please fill in all fields.");
+            System.out.println(" fill in all fields.");
             return;
         }
-
         SystemBackup systemBackup = new SystemBackup(place, type, date, backup);
         backupList.add(systemBackup);
-
-        // Clear input fields
         placeTextField.clear();
         TypeComboBox.getSelectionModel().clearSelection();
         dateDatePicker.setValue(null);
