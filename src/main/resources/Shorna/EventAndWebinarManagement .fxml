@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shorna.EventAndWebinarManagement">
    <children>
-      <Label layoutX="189.0" layoutY="48.0" text="Event &amp; Webinar Management">
+      <Label fx:id="EventWebinarManagementLabel" layoutX="189.0" layoutY="48.0" text="Event &amp; Webinar Management">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <VBox layoutX="71.0" layoutY="114.0" prefHeight="241.0" prefWidth="450.0">
+         <children>
+            <HBox prefHeight="8.0" prefWidth="450.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleScheduleEvent" text="Schedule Event" />
+                  <Button mnemonicParsing="false" onAction="#handleCreateEvent" text="Create Event" />
+                  <Button mnemonicParsing="false" onAction="#handlePromoteEvent" text="Promote Event" />
+               </children>
+            </HBox>
+            <TitledPane animated="false" text="Registration Data &amp; Attendance Analytics">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="211.0" prefWidth="457.0">
+                     <children>
+                        <TableView fx:id="eventTable" prefHeight="178.0" prefWidth="296.0">
+                          <columns>
+                            <TableColumn fx:id="eventNameColumn" prefWidth="75.0" text="Event Name" />
+                            <TableColumn fx:id="registrationsColumn" prefWidth="96.800048828125" text="Registrations" />
+                              <TableColumn fx:id="attendanceColumn" prefWidth="120.00001525878906" text="Attendance %" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="296.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleSendFollowUp" text="Send Follow-up Email" />
+                        <Button layoutX="296.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleSendSurvey" text="Send Post-Event Survey" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
