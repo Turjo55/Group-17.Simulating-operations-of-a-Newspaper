@@ -55,6 +55,5 @@ public class ViewCompanyFinancialSummary {
         this.amount = amount;
         this.date = date;
 
-
     }
 }

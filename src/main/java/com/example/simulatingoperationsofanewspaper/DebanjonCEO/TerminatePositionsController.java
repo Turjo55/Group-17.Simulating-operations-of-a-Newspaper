@@ -1,4 +1,4 @@
 package com.example.simulatingoperationsofanewspaper.DebanjonCEO;
 
-public class ApproveEmployeePromotionsController {
+public class TerminatePositionsController {
 }
