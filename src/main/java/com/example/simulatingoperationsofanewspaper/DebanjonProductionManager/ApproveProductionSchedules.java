@@ -40,7 +40,35 @@ public class ApproveProductionSchedules {
 
     private Str name;
 
+    public String getScheduleId() {
+        return scheduleId;
+    }
+
+    public String getProductionDate() {
+        return productionDate;
+    }
+
+    public String getShift() {
+        return shift;
+    }
+
+    public String getTask() {
+        return task;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public Str getName() {
+        return name;
+    }
+
     public ApproveProductionSchedules(Str name) {
         this.name = name;
+
+
+
+
     }
 }
