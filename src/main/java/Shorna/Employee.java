@@ -35,6 +35,17 @@ package Shorna;
         public double getBonuses() {
             return bonuses;
         }
+
+        @Override
+        public String toString() {
+            return "Employee{" +
+                    "empId='" + empId + '\'' +
+                    ", name='" + name + '\'' +
+                    ", basic=" + basic +
+                    ", deductions=" + deductions +
+                    ", bonuses=" + bonuses +
+                    '}';
+        }
     }
 
 

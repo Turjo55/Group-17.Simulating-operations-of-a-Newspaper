@@ -83,4 +83,78 @@ public class VendorAndSupplierPayments {
             System.out.println(invoice.getVendor() + " | " + invoice.getInvoiceNo() + " | " + invoice.getAmount() + " | " + invoice.getStatus());
         }
     }
+
+    public VendorAndSupplierPayments(Label vendorAndSupplierPaymentsLabel, TableColumn<Invoice, Double> colAmount, TableColumn<Invoice, String> colInvoiceNo, TableColumn<Invoice, String> colStatus, TableColumn<Invoice, String> colVendor, TableView<Invoice> invoiceTable) {
+        VendorAndSupplierPaymentsLabel = vendorAndSupplierPaymentsLabel;
+        this.colAmount = colAmount;
+        this.colInvoiceNo = colInvoiceNo;
+        this.colStatus = colStatus;
+        this.colVendor = colVendor;
+        this.invoiceTable = invoiceTable;
+    }
+
+    public Label getVendorAndSupplierPaymentsLabel() {
+        return VendorAndSupplierPaymentsLabel;
+    }
+
+    public void setVendorAndSupplierPaymentsLabel(Label vendorAndSupplierPaymentsLabel) {
+        VendorAndSupplierPaymentsLabel = vendorAndSupplierPaymentsLabel;
+    }
+
+    public TableColumn<Invoice, Double> getColAmount() {
+        return colAmount;
+    }
+
+    public void setColAmount(TableColumn<Invoice, Double> colAmount) {
+        this.colAmount = colAmount;
+    }
+
+    public TableColumn<Invoice, String> getColInvoiceNo() {
+        return colInvoiceNo;
+    }
+
+    public void setColInvoiceNo(TableColumn<Invoice, String> colInvoiceNo) {
+        this.colInvoiceNo = colInvoiceNo;
+    }
+
+    public TableColumn<Invoice, String> getColStatus() {
+        return colStatus;
+    }
+
+    public void setColStatus(TableColumn<Invoice, String> colStatus) {
+        this.colStatus = colStatus;
+    }
+
+    public TableColumn<Invoice, String> getColVendor() {
+        return colVendor;
+    }
+
+    public void setColVendor(TableColumn<Invoice, String> colVendor) {
+        this.colVendor = colVendor;
+    }
+
+    public TableView<Invoice> getInvoiceTable() {
+        return invoiceTable;
+    }
+
+    public void setInvoiceTable(TableView<Invoice> invoiceTable) {
+        this.invoiceTable = invoiceTable;
+    }
+
+    public ObservableList<Invoice> getInvoiceList() {
+        return invoiceList;
+    }
+
+    @Override
+    public String toString() {
+        return "VendorAndSupplierPayments{" +
+                "VendorAndSupplierPaymentsLabel=" + VendorAndSupplierPaymentsLabel +
+                ", colAmount=" + colAmount +
+                ", colInvoiceNo=" + colInvoiceNo +
+                ", colStatus=" + colStatus +
+                ", colVendor=" + colVendor +
+                ", invoiceTable=" + invoiceTable +
+                ", invoiceList=" + invoiceList +
+                '}';
+    }
 }
