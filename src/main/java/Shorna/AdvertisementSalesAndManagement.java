@@ -71,11 +71,60 @@ public class AdvertisementSalesAndManagement {
         showAlert("Invoice Sent", "Invoice and confirmation have been sent to the client.");
     }
 
+    public AdvertisementSalesAndManagement(Label advertisementSalesManagementLabel, ListView<String> adSlotsList, TextArea analyticsOutput, List<AdSlot> adSlotData) {
+        AdvertisementSalesManagementLabel = advertisementSalesManagementLabel;
+        this.adSlotsList = adSlotsList;
+        this.analyticsOutput = analyticsOutput;
+        this.adSlotData = adSlotData;
+    }
+
     private void showAlert(String title, String message) {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    public Label getAdvertisementSalesManagementLabel() {
+        return AdvertisementSalesManagementLabel;
+    }
+
+    public void setAdvertisementSalesManagementLabel(Label advertisementSalesManagementLabel) {
+        AdvertisementSalesManagementLabel = advertisementSalesManagementLabel;
+    }
+
+    public ListView<String> getAdSlotsList() {
+        return adSlotsList;
+    }
+
+    public void setAdSlotsList(ListView<String> adSlotsList) {
+        this.adSlotsList = adSlotsList;
+    }
+
+    public TextArea getAnalyticsOutput() {
+        return analyticsOutput;
+    }
+
+    public void setAnalyticsOutput(TextArea analyticsOutput) {
+        this.analyticsOutput = analyticsOutput;
+    }
+
+    public List<AdSlot> getAdSlotData() {
+        return adSlotData;
+    }
+
+    public void setAdSlotData(List<AdSlot> adSlotData) {
+        this.adSlotData = adSlotData;
+    }
+
+    @Override
+    public String toString() {
+        return "AdvertisementSalesAndManagement{" +
+                "AdvertisementSalesManagementLabel=" + AdvertisementSalesManagementLabel +
+                ", adSlotsList=" + adSlotsList +
+                ", analyticsOutput=" + analyticsOutput +
+                ", adSlotData=" + adSlotData +
+                '}';
     }
 }
