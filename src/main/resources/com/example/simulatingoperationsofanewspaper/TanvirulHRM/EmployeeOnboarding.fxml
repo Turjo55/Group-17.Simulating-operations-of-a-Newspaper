@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0"
             xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.simulatingoperationsofanewspaper.TanvirulHRM.EmployeeOnboarding">
+            fx:controller="com.example.simulatingoperationsofanewspaper.TanvirulHRM.EmployeeOnboardingController">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
          <children>

@@ -71,9 +71,97 @@ public class SubscriptionAndAdvertisementRevenueManagement {
             pendingPaymentsLabel.setText("Pending Payments: $" + report.getPendingPayments());
             receivedPaymentsLabel.setText("Received Payments: $" + report.getReceivedPayments());
         }
+
+    public SubscriptionAndAdvertisementRevenueManagement(Label advertisementRevenueLabel, Label pendingPaymentsLabel, Label receivedPaymentsLabel, Label subscriptionAndAdvertisementRevenueManagementLabel, Label subscriptionRevenueLabel, DatePicker fromDatePicker, TextField revenueDetailsTextField, DatePicker toDatePicker) {
+        this.advertisementRevenueLabel = advertisementRevenueLabel;
+        this.pendingPaymentsLabel = pendingPaymentsLabel;
+        this.receivedPaymentsLabel = receivedPaymentsLabel;
+        this.subscriptionAndAdvertisementRevenueManagementLabel = subscriptionAndAdvertisementRevenueManagementLabel;
+        this.subscriptionRevenueLabel = subscriptionRevenueLabel;
+        this.fromDatePicker = fromDatePicker;
+        this.revenueDetailsTextField = revenueDetailsTextField;
+        this.toDatePicker = toDatePicker;
     }
 
+    public Label getAdvertisementRevenueLabel() {
+        return advertisementRevenueLabel;
+    }
 
+    public void setAdvertisementRevenueLabel(Label advertisementRevenueLabel) {
+        this.advertisementRevenueLabel = advertisementRevenueLabel;
+    }
 
+    public Label getPendingPaymentsLabel() {
+        return pendingPaymentsLabel;
+    }
 
+    public void setPendingPaymentsLabel(Label pendingPaymentsLabel) {
+        this.pendingPaymentsLabel = pendingPaymentsLabel;
+    }
+
+    public Label getReceivedPaymentsLabel() {
+        return receivedPaymentsLabel;
+    }
+
+    public void setReceivedPaymentsLabel(Label receivedPaymentsLabel) {
+        this.receivedPaymentsLabel = receivedPaymentsLabel;
+    }
+
+    public Label getSubscriptionAndAdvertisementRevenueManagementLabel() {
+        return subscriptionAndAdvertisementRevenueManagementLabel;
+    }
+
+    public void setSubscriptionAndAdvertisementRevenueManagementLabel(Label subscriptionAndAdvertisementRevenueManagementLabel) {
+        this.subscriptionAndAdvertisementRevenueManagementLabel = subscriptionAndAdvertisementRevenueManagementLabel;
+    }
+
+    public Label getSubscriptionRevenueLabel() {
+        return subscriptionRevenueLabel;
+    }
+
+    public void setSubscriptionRevenueLabel(Label subscriptionRevenueLabel) {
+        this.subscriptionRevenueLabel = subscriptionRevenueLabel;
+    }
+
+    public DatePicker getFromDatePicker() {
+        return fromDatePicker;
+    }
+
+    public void setFromDatePicker(DatePicker fromDatePicker) {
+        this.fromDatePicker = fromDatePicker;
+    }
+
+    public TextField getRevenueDetailsTextField() {
+        return revenueDetailsTextField;
+    }
+
+    public void setRevenueDetailsTextField(TextField revenueDetailsTextField) {
+        this.revenueDetailsTextField = revenueDetailsTextField;
+    }
+
+    public DatePicker getToDatePicker() {
+        return toDatePicker;
+    }
+
+    public void setToDatePicker(DatePicker toDatePicker) {
+        this.toDatePicker = toDatePicker;
+    }
+
+    @Override
+    public String toString() {
+        return "SubscriptionAndAdvertisementRevenueManagement{" +
+                "advertisementRevenueLabel=" + advertisementRevenueLabel +
+                ", pendingPaymentsLabel=" + pendingPaymentsLabel +
+                ", receivedPaymentsLabel=" + receivedPaymentsLabel +
+                ", subscriptionAndAdvertisementRevenueManagementLabel=" + subscriptionAndAdvertisementRevenueManagementLabel +
+                ", subscriptionRevenueLabel=" + subscriptionRevenueLabel +
+                ", fromDatePicker=" + fromDatePicker +
+                ", revenueDetailsTextField=" + revenueDetailsTextField +
+                ", toDatePicker=" + toDatePicker +
+                '}';
+    }
 }
+
+
+
+
