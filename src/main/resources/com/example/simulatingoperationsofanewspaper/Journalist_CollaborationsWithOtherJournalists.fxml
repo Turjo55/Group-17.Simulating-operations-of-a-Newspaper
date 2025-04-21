@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="481.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofanewspaper.JournalistCollaborationsWithOtherJournalists">
+    <children>
+        <Label layoutX="208.0" layoutY="137.0" text="Collaborations with Other Journalists">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane> 

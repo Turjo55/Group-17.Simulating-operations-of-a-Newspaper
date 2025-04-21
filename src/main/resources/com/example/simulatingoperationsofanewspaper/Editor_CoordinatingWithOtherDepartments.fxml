@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="900.0" spacing="10.0"
+    xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.example.simulatingoperationsofanewspaper.EditorCoordinatingWithOtherDepartments">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+
+    <Label text="Collaboration Hub - Inter-Department Coordination"
+        style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <TabPane prefHeight="600.0" prefWidth="880.0">
+        <tabs>
+            <Tab text="Design Team">
+                <content>
+                    <VBox spacing="10.0">
+                        <HBox spacing="10.0" alignment="CENTER_LEFT">
+                            <Label text="Article:" />
+                            <ComboBox fx:id="designArticleComboBox" prefWidth="200.0" />
+                            <Button fx:id="loadDesignButton" mnemonicParsing="false"
+                                text="Load Article" />
+                        </HBox>
+                        <GridPane hgap="10.0" vgap="10.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0"
+                                    prefWidth="150.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0"
+                                    prefWidth="400.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Layout Requirements:" GridPane.rowIndex="0" />
+                                <TextArea fx:id="layoutRequirementsArea" prefHeight="100.0"
+                                    prefWidth="400.0"
+                                    wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <Label text="Design Notes:" GridPane.rowIndex="1" />
+                                <TextArea fx:id="designNotesArea" prefHeight="100.0"
+                                    prefWidth="400.0"
+                                    wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label text="Status:" GridPane.rowIndex="2" />
+                                <ComboBox fx:id="designStatusComboBox" GridPane.columnIndex="1"
+                                    GridPane.rowIndex="2" />
+                            </children>
+                        </GridPane>
+                        <HBox spacing="10.0">
+                            <Button fx:id="submitDesignButton" mnemonicParsing="false"
+                                text="Submit to Design Team" />
+                            <Button fx:id="viewDesignButton" mnemonicParsing="false"
+                                text="View Design Preview" />
+                        </HBox>
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Marketing Team">
+                <content>
+                    <VBox spacing="10.0">
+                        <HBox spacing="10.0" alignment="CENTER_LEFT">
+                            <Label text="Content Schedule:" />
+                            <DatePicker fx:id="scheduleDatePicker" />
+                            <Button fx:id="loadScheduleButton" mnemonicParsing="false"
+                                text="Load Schedule" />
+                        </HBox>
+                        <GridPane hgap="10.0" vgap="10.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0"
+                                    prefWidth="150.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0"
+                                    prefWidth="400.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Promotion Details:" GridPane.rowIndex="0" />
+                                <TextArea fx:id="promotionDetailsArea" prefHeight="100.0"
+                                    prefWidth="400.0"
+                                    wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <Label text="Target Audience:" GridPane.rowIndex="1" />
+                                <TextArea fx:id="targetAudienceArea" prefHeight="100.0"
+                                    prefWidth="400.0"
+                                    wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label text="Status:" GridPane.rowIndex="2" />
+                                <ComboBox fx:id="marketingStatusComboBox" GridPane.columnIndex="1"
+                                    GridPane.rowIndex="2" />
+                            </children>
+                        </GridPane>
+                        <HBox spacing="10.0">
+                            <Button fx:id="submitMarketingButton" mnemonicParsing="false"
+                                text="Submit to Marketing" />
+                            <Button fx:id="viewPromotionButton" mnemonicParsing="false"
+                                text="View Promotion Plan" />
+                        </HBox>
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="IT Support">
+                <content>
+                    <VBox spacing="10.0">
+                        <GridPane hgap="10.0" vgap="10.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0"
+                                    prefWidth="150.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0"
+                                    prefWidth="400.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Issue Type:" GridPane.rowIndex="0" />
+                                <ComboBox fx:id="issueTypeComboBox" GridPane.columnIndex="1"
+                                    GridPane.rowIndex="0" />
+                                <Label text="Description:" GridPane.rowIndex="1" />
+                                <TextArea fx:id="issueDescriptionArea" prefHeight="100.0"
+                                    prefWidth="400.0"
+                                    wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label text="Priority:" GridPane.rowIndex="2" />
+                                <ComboBox fx:id="issuePriorityComboBox" GridPane.columnIndex="1"
+                                    GridPane.rowIndex="2" />
+                                <Label text="Status:" GridPane.rowIndex="3" />
+                                <ComboBox fx:id="issueStatusComboBox" GridPane.columnIndex="1"
+                                    GridPane.rowIndex="3" />
+                            </children>
+                        </GridPane>
+                        <HBox spacing="10.0">
+                            <Button fx:id="submitIssueButton" mnemonicParsing="false"
+                                text="Submit Issue" />
+                            <Button fx:id="viewIssuesButton" mnemonicParsing="false"
+                                text="View Reported Issues" />
+                        </HBox>
+                    </VBox>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+</VBox> 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulatingoperationsofanewspaper.JournalistDashboard">
+    <top>
+        <AnchorPane prefHeight="45.0" prefWidth="852.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="39.0" layoutY="18.0" text="Welcome" />
+                <Label fx:id="nameLabel" layoutX="98.0" layoutY="16.0" text="Fatema begum" textFill="#3228bc">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Button layoutX="816.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleLogout" text="Log out" />
+            </children>
+        </AnchorPane>
+    </top>
+    <left>
+        <AnchorPane prefHeight="389.0" prefWidth="224.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleArticleCreationAndSubmission" prefHeight="47.0" prefWidth="185.0" text="Article Creation And Submission" wrapText="true" />
+                <Button layoutX="17.0" layoutY="69.0" mnemonicParsing="false" onAction="#handleResearchAndFactChecking" prefHeight="35.0" prefWidth="186.0" text="Research and fact-checking" wrapText="true" />
+                <Button layoutX="17.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleInterviewAndSourceManagement" prefHeight="50.0" prefWidth="186.0" text=" Interview and source management" wrapText="true" />
+                <Button layoutX="17.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleArticleRevisionAndEditorialfeedback" prefHeight="53.0" prefWidth="187.0" text="Article Revision and Editorialfeedback" wrapText="true" />
+                <Button layoutX="16.0" layoutY="231.0" mnemonicParsing="false" onAction="#handleMultimediaCcontentUploadAndManagement" prefHeight="53.0" prefWidth="187.0" text="Multimedia content upload andManagement" wrapText="true" />
+                <Button layoutX="16.0" layoutY="292.0" mnemonicParsing="false" onAction="#handlePerformanceAndEngagementTracking" prefHeight="53.0" prefWidth="187.0" text="Performance and EngagementTracking" wrapText="true" />
+                <Button layoutX="16.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleCollaborationsWithOtherJournalists" prefHeight="53.0" prefWidth="187.0" text="Collaborations with other journalists" wrapText="true" />
+                <Button layoutX="16.0" layoutY="416.0" mnemonicParsing="false" onAction="#handleSchedulingAndPublishingmanagement" prefHeight="53.0" prefWidth="187.0" text="Scheduling and publishingmanagement" wrapText="true" />
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="481.0" prefWidth="628.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="208.0" layoutY="137.0" text="Journalist Dashboard">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
