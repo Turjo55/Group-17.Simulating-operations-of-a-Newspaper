@@ -2,8 +2,8 @@
 package com.example.simulatingoperationsofanewspaper.DebanjonProductionManager;
 
 public class ResolveComplaints {
-    protected Str name:
-    private   Str  type:
+    protected String name:
+    private   String decription:
 
     public ResolveComplaints(Str name, Str type) {
         this.name = name;
