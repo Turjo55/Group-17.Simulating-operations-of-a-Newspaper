@@ -67,4 +67,73 @@ public class SubscriptionGrowthAndRetention {
     void handleSendPromotions(ActionEvent event) {
         reportArea.setText("Sending promotional emails/SMS to inactive subscribers...");
     }
+
+    public SubscriptionGrowthAndRetention(Label subscriptionGrowthRetentionLabel, VBox dashboardPane, VBox subscriptionOptionsBox, TextField usernameField, TextField passwordField, TextArea reportArea) {
+        SubscriptionGrowthRetentionLabel = subscriptionGrowthRetentionLabel;
+        this.dashboardPane = dashboardPane;
+        this.subscriptionOptionsBox = subscriptionOptionsBox;
+        this.usernameField = usernameField;
+        this.passwordField = passwordField;
+        this.reportArea = reportArea;
+    }
+
+    public Label getSubscriptionGrowthRetentionLabel() {
+        return SubscriptionGrowthRetentionLabel;
+    }
+
+    public void setSubscriptionGrowthRetentionLabel(Label subscriptionGrowthRetentionLabel) {
+        SubscriptionGrowthRetentionLabel = subscriptionGrowthRetentionLabel;
+    }
+
+    public VBox getDashboardPane() {
+        return dashboardPane;
+    }
+
+    public void setDashboardPane(VBox dashboardPane) {
+        this.dashboardPane = dashboardPane;
+    }
+
+    public VBox getSubscriptionOptionsBox() {
+        return subscriptionOptionsBox;
+    }
+
+    public void setSubscriptionOptionsBox(VBox subscriptionOptionsBox) {
+        this.subscriptionOptionsBox = subscriptionOptionsBox;
+    }
+
+    public TextField getUsernameField() {
+        return usernameField;
+    }
+
+    public void setUsernameField(TextField usernameField) {
+        this.usernameField = usernameField;
+    }
+
+    public TextField getPasswordField() {
+        return passwordField;
+    }
+
+    public void setPasswordField(TextField passwordField) {
+        this.passwordField = passwordField;
+    }
+
+    public TextArea getReportArea() {
+        return reportArea;
+    }
+
+    public void setReportArea(TextArea reportArea) {
+        this.reportArea = reportArea;
+    }
+
+    @Override
+    public String toString() {
+        return "SubscriptionGrowthAndRetention{" +
+                "SubscriptionGrowthRetentionLabel=" + SubscriptionGrowthRetentionLabel +
+                ", dashboardPane=" + dashboardPane +
+                ", subscriptionOptionsBox=" + subscriptionOptionsBox +
+                ", usernameField=" + usernameField +
+                ", passwordField=" + passwordField +
+                ", reportArea=" + reportArea +
+                '}';
+    }
 }
