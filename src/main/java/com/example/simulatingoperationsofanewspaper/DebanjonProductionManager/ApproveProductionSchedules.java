@@ -37,4 +37,10 @@ public class ApproveProductionSchedules {
 
 
     }
+
+    private Str name;
+
+    public ApproveProductionSchedules(Str name) {
+        this.name = name;
+    }
 }
