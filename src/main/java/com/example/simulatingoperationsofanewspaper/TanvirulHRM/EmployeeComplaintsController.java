@@ -1,41 +1,74 @@
 package com.example.simulatingoperationsofanewspaper.TanvirulHRM;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class EmployeeComplaintsController
-{
-    @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
-    @javafx.fxml.FXML
-    private TableView employeeComplaintsTableView;
-    @javafx.fxml.FXML
-    private TableColumn nameTableColumn;
-    @javafx.fxml.FXML
+public class EmployeeComplaintsController {
+
+    @FXML
+    private TableColumn<Complaints, String> statusTableColumn;
+    @FXML
+    private TableView<Complaints> employeeComplaintsTableView;
+    @FXML
+    private TableColumn<Complaints, String> nameTableColumn;
+    @FXML
     private TextField notesTextField;
-    @javafx.fxml.FXML
-    private ComboBox typeComboBox;
-    @javafx.fxml.FXML
-    private TableColumn notesTableColumn;
-    @javafx.fxml.FXML
+    @FXML
+    private ComboBox<String> typeComboBox;
+    @FXML
+    private TableColumn<Complaints, String> notesTableColumn;
+    @FXML
     private TextField statusTextField;
-    @javafx.fxml.FXML
+    @FXML
     private TextField nameTextField;
-    @javafx.fxml.FXML
-    private TableColumn typeTableColumn;
-    @javafx.fxml.FXML
+    @FXML
+    private TableColumn<Complaints, String> typeTableColumn;
+    @FXML
     private TextField complaintsTextField;
-    @javafx.fxml.FXML
-    private TableColumn complaintsTableColumn;
+    @FXML
+    private TableColumn<Complaints, String> complaintsTableColumn;
 
-    @javafx.fxml.FXML
+    private final ObservableList<Complaints> complaintsList = FXCollections.observableArrayList();
+
+    @FXML
     public void initialize() {
+        typeComboBox.setItems(FXCollections.observableArrayList("Harassment", "Overwork", "Other"));
+        nameTableColumn.setCellValueFactory(new PropertyValueFactory<>("employeeName"));
+        typeTableColumn.setCellValueFactory(new PropertyValueFactory<>("complaintType"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+        notesTableColumn.setCellValueFactory(new PropertyValueFactory<>("notes"));
+        complaintsTableColumn.setCellValueFactory(new PropertyValueFactory<>("complaintDetails"));
+        employeeComplaintsTableView.setItems(complaintsList);
     }
 
-    @javafx.fxml.FXML
-    public void buttonOnClick(ActionEvent actionEvent) {
+    @FXML
+    public void buttonOnClick(ActionEvent event) {
+        String name = nameTextField.getText();
+        String type = typeComboBox.getValue();
+        String status = statusTextField.getText();
+        String notes = notesTextField.getText();
+        String complaintDetails = complaintsTextField.getText();
+
+        if (name.isEmpty() || type == null || status.isEmpty() || notes.isEmpty() || complaintDetails.isEmpty()) {
+            System.out.println("All fields must be filled.");
+            return;
+        }
+
+        Complaints newComplaint = new Complaints(name, type, status, notes, complaintDetails);
+        complaintsList.add(newComplaint);
+        nameTextField.clear();
+        typeComboBox.setValue(null);
+        statusTextField.clear();
+        notesTextField.clear();
+        complaintsTextField.clear();
+
+        System.out.println("Complaint submitted successfully.");
     }
 }

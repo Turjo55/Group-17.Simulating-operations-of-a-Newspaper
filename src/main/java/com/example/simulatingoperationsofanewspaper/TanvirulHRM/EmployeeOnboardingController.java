@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class EmployeeOnboarding {
+public class EmployeeOnboardingController {
     @FXML private TableView<EmployeeOnboardingModel> addNewEmployeeTableView;
     @FXML private ComboBox<String> typeComboBox;
     @FXML private TextField employeeIDTextField;
@@ -38,9 +38,7 @@ public class EmployeeOnboarding {
 
     @FXML
     public void initialize() {
-        // Set up ComboBox options
-        typeComboBox.setItems(FXCollections.observableArrayList(
-                "Full-Time", "Part-Time", "Intern", "Contractor"));
+        typeComboBox.setItems(FXCollections.observableArrayList("Full-Time", "Part-Time", "Intern", "Contractor"));
         typeTableColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
         employeeIDTableColumn.setCellValueFactory(new PropertyValueFactory<>("employeeID"));
         nameTableColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
