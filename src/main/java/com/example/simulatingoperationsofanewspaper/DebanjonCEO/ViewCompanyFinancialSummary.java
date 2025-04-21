@@ -49,8 +49,6 @@ public class ViewCompanyFinancialSummary {
                 '}';
     }
 
-
-
     public ViewCompanyFinancialSummary(String budgetId, String description, double amount, Str date) {
         this.budgetId = budgetId;
         this.description = description;
