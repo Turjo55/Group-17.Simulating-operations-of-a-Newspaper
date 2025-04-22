@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="900.0" spacing="10.0"
+    xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.example.simulatingoperationsofanewspaper.maliha.JournalistArticleRevisionAndEditorialFeedback">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+
+    <Label text="Article Revision and Editorial Feedback"
+        style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <SplitPane dividerPositions="0.3" prefHeight="600.0" prefWidth="880.0">
+        <items>
+            <VBox prefHeight="600.0" prefWidth="264.0" spacing="10.0">
+                <Label text="Articles Needing Revision" style="-fx-font-weight: bold;" />
+                <ListView fx:id="articlesListView" prefHeight="200.0" prefWidth="264.0" />
+                <Label text="Revision History" style="-fx-font-weight: bold;" />
+                <ListView fx:id="revisionHistoryListView" prefHeight="200.0" prefWidth="264.0" />
+                <HBox spacing="10.0">
+                    <Button fx:id="loadArticlesButton" mnemonicParsing="false" text="Load Articles" />
+                    <Button fx:id="refreshButton" mnemonicParsing="false" text="Refresh" />
+                </HBox>
+            </VBox>
+            <VBox prefHeight="600.0" prefWidth="616.0" spacing="10.0">
+                <TabPane prefHeight="550.0" prefWidth="616.0">
+                    <tabs>
+                        <Tab text="Editorial Feedback">
+                            <content>
+                                <VBox spacing="10.0">
+                                    <GridPane hgap="10.0" vgap="10.0">
+                                        <columnConstraints>
+                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0"
+                                                prefWidth="150.0" />
+                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0"
+                                                prefWidth="400.0" />
+                                        </columnConstraints>
+                                        <rowConstraints>
+                                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                vgrow="SOMETIMES" />
+                                        </rowConstraints>
+                                        <children>
+                                            <Label text="Editor Comments:" GridPane.rowIndex="0" />
+                                            <TextArea fx:id="editorCommentsArea" prefHeight="100.0"
+                                                prefWidth="400.0"
+                                                wrapText="true" GridPane.columnIndex="1"
+                                                GridPane.rowIndex="0" />
+                                            <Label text="Required Changes:" GridPane.rowIndex="1" />
+                                            <TextArea fx:id="requiredChangesArea" prefHeight="100.0"
+                                                prefWidth="400.0"
+                                                wrapText="true" GridPane.columnIndex="1"
+                                                GridPane.rowIndex="1" />
+                                            <Label text="Deadline:" GridPane.rowIndex="2" />
+                                            <DatePicker fx:id="deadlineDatePicker"
+                                                GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                            <Label text="Status:" GridPane.rowIndex="3" />
+                                            <ComboBox fx:id="statusComboBox"
+                                                GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                            <Label text="Priority:" GridPane.rowIndex="4" />
+                                            <ComboBox fx:id="priorityComboBox"
+                                                GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                        </children>
+                                    </GridPane>
+                                    <HBox spacing="10.0">
+                                        <Button fx:id="acknowledgeFeedbackButton"
+                                            mnemonicParsing="false" text="Acknowledge Feedback" />
+                                        <Button fx:id="requestClarificationButton"
+                                            mnemonicParsing="false" text="Request Clarification" />
+                                    </HBox>
+                                </VBox>
+                            </content>
+                        </Tab>
+                        <Tab text="Article Revision">
+                            <content>
+                                <VBox spacing="10.0">
+                                    <GridPane hgap="10.0" vgap="10.0">
+                                        <columnConstraints>
+                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0"
+                                                prefWidth="150.0" />
+                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0"
+                                                prefWidth="400.0" />
+                                        </columnConstraints>
+                                        <rowConstraints>
+                                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                vgrow="SOMETIMES" />
+                                        </rowConstraints>
+                                        <children>
+                                            <Label text="Original Content:" GridPane.rowIndex="0" />
+                                            <TextArea fx:id="originalContentArea" prefHeight="100.0"
+                                                prefWidth="400.0"
+                                                wrapText="true" GridPane.columnIndex="1"
+                                                GridPane.rowIndex="0" />
+                                            <Label text="Revised Content:" GridPane.rowIndex="1" />
+                                            <TextArea fx:id="revisedContentArea" prefHeight="100.0"
+                                                prefWidth="400.0"
+                                                wrapText="true" GridPane.columnIndex="1"
+                                                GridPane.rowIndex="1" />
+                                            <Label text="Changes Made:" GridPane.rowIndex="2" />
+                                            <TextArea fx:id="changesMadeArea" prefHeight="100.0"
+                                                prefWidth="400.0"
+                                                wrapText="true" GridPane.columnIndex="1"
+                                                GridPane.rowIndex="2" />
+                                            <Label text="Revision Notes:" GridPane.rowIndex="3" />
+                                            <TextArea fx:id="revisionNotesArea" prefHeight="100.0"
+                                                prefWidth="400.0"
+                                                wrapText="true" GridPane.columnIndex="1"
+                                                GridPane.rowIndex="3" />
+                                        </children>
+                                    </GridPane>
+                                    <HBox spacing="10.0">
+                                        <Button fx:id="saveDraftButton" mnemonicParsing="false"
+                                            text="Save Draft" />
+                                        <Button fx:id="submitRevisionButton" mnemonicParsing="false"
+                                            text="Submit Revision" />
+                                    </HBox>
+                                </VBox>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+                <HBox spacing="10.0">
+                    <Button fx:id="viewHistoryButton" mnemonicParsing="false"
+                        text="View Revision History" />
+                    <Button fx:id="exportFeedbackButton" mnemonicParsing="false"
+                        text="Export Feedback" />
+                </HBox>
+            </VBox>
+        </items>
+    </SplitPane>
+</VBox> 

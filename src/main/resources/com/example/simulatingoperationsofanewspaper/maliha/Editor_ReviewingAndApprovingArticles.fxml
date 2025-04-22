@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="10.0"
+    xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.example.simulatingoperationsofanewspaper.maliha.EditorReviewingAndApprovingArticles">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+
+    <Label text="Article Review Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Label text="Status Filter:" />
+        <ComboBox fx:id="statusFilterComboBox" prefWidth="150.0" />
+        <Label text="Category Filter:" />
+        <ComboBox fx:id="categoryFilterComboBox" prefWidth="150.0" />
+        <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#handleRefresh"
+            text="Refresh" />
+    </HBox>
+
+    <SplitPane dividerPositions="0.3" prefHeight="400.0" prefWidth="780.0">
+        <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+                <Label text="Pending Articles" style="-fx-font-weight: bold;" />
+                <ListView fx:id="articleListView" prefHeight="350.0" prefWidth="200.0" />
+            </VBox>
+            <VBox spacing="10.0">
+                <HBox spacing="10.0">
+                    <Label text="Title:" />
+                    <Label fx:id="titleLabel" style="-fx-font-weight: bold;" />
+                    <Label text="Author:" />
+                    <Label fx:id="authorLabel" />
+                    <Label text="Category:" />
+                    <Label fx:id="categoryLabel" />
+                </HBox>
+                <TextArea fx:id="contentArea" prefHeight="200.0" prefWidth="580.0" wrapText="true"
+                    editable="false" />
+
+                <HBox spacing="10.0" prefHeight="150.0">
+                    <VBox spacing="10.0" prefWidth="100.0">
+                        <Label text="Images" />
+                        <FlowPane fx:id="imagePreviewContainer" hgap="10.0" vgap="10.0"
+                            prefWidth="480.0">
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </FlowPane>
+                    </VBox>
+                </HBox>
+
+                <HBox spacing="10.0">
+                    <Label text="Priority:" />
+                    <ComboBox fx:id="priorityComboBox" prefWidth="150.0" />
+                    <Label text="New Category:" />
+                    <ComboBox fx:id="newCategoryComboBox" prefWidth="150.0" />
+                </HBox>
+
+                <TextArea fx:id="feedbackArea" prefHeight="100.0" prefWidth="580.0"
+                    promptText="Enter feedback or revision requests..." />
+
+                <HBox spacing="10.0">
+                    <Button fx:id="approveButton" mnemonicParsing="false"
+                        onAction="#handleApprove" text="Approve Article"
+                        style="-fx-background-color: #90EE90;" />
+                    <Button fx:id="rejectButton" mnemonicParsing="false"
+                        onAction="#handleReject" text="Reject Article"
+                        style="-fx-background-color: #FFB6C1;" />
+                </HBox>
+            </VBox>
+        </items>
+    </SplitPane>
+</VBox> 

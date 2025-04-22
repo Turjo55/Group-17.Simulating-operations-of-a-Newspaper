@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="900.0" spacing="10.0"
+    xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.example.simulatingoperationsofanewspaper.maliha.EditorEditingAndFormattingArticles">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+
+    <Label text="Article Editing and Formatting" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <Label text="Category Filter:" />
+        <ComboBox fx:id="categoryFilterComboBox" prefWidth="150.0" />
+        <Label text="Priority Filter:" />
+        <ComboBox fx:id="priorityFilterComboBox" prefWidth="150.0" />
+        <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#handleRefresh"
+            text="Refresh" />
+    </HBox>
+
+    <SplitPane dividerPositions="0.3" prefHeight="500.0" prefWidth="880.0">
+        <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+                <Label text="Pending Articles" style="-fx-font-weight: bold;" />
+                <ListView fx:id="articleListView" prefHeight="450.0" prefWidth="200.0" />
+            </VBox>
+            <VBox spacing="10.0">
+                <GridPane hgap="10.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="400.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Title:" GridPane.rowIndex="0" />
+                        <Label fx:id="titleLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Author:" GridPane.rowIndex="1" />
+                        <Label fx:id="authorLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Category:" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="categoryComboBox" GridPane.columnIndex="1"
+                            GridPane.rowIndex="2" />
+                        <Label text="Priority:" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="priorityComboBox" GridPane.columnIndex="1"
+                            GridPane.rowIndex="3" />
+                        <Label text="Content:" GridPane.rowIndex="4" />
+                        <TextArea fx:id="contentArea" prefHeight="200.0" prefWidth="400.0"
+                            wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Editor's Notes:" GridPane.rowIndex="5" />
+                        <TextArea fx:id="editorNotesArea" prefHeight="100.0" prefWidth="400.0"
+                            wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    </children>
+                </GridPane>
+
+                <HBox spacing="10.0">
+                    <Button fx:id="saveButton" mnemonicParsing="false"
+                        onAction="#handleSave" text="Save Changes"
+                        style="-fx-background-color: #90EE90;" />
+                    <Button fx:id="submitButton" mnemonicParsing="false"
+                        onAction="#handleSubmit" text="Submit for Approval" />
+                </HBox>
+            </VBox>
+        </items>
+    </SplitPane>
+</VBox> 
